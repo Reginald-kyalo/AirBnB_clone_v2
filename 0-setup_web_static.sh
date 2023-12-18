@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env bash
 #sets up web servers for the deployment of web_static
 
 apt-get update
