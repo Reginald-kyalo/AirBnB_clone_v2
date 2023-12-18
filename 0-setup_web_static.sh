@@ -4,8 +4,8 @@
 apt-get update
 apt-get install -y nginx
 
-dir="/data/web_static/releases/test/"
-mkdir -p "$dir"
+mkdir -p /data/web_static/releases/test/
+mkdir -p /data/web_static/shared/
 cat << EOF > "$dir/index.html"
 <html>
 <head>
