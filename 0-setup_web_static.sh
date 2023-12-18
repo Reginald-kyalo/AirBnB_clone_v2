@@ -6,7 +6,7 @@ apt-get install -y nginx
 
 mkdir -p /data/web_static/releases/test/
 mkdir -p /data/web_static/shared/
-cat << EOF > "$dir/index.html"
+cat << EOF > "/data/web_static/releases/test/index.html"
 <html>
 <head>
 	<title>Test Page</title>
