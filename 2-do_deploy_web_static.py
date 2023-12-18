@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#distributes an archive to web servers
+# distributes an archive to web servers
 from fabric import Connection, Config
 import os
 

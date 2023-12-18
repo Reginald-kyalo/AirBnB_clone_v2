@@ -16,7 +16,7 @@ cat << EOF > "$dir/index.html"
 </body>
 </html>
 EOF
-ln -s "/data/web_static/releases/test/" "/data/web_static/current"
+ln -sf "/data/web_static/releases/test/" "/data/web_static/current"
 
 chown -R ubuntu /data/
 chgrp -R ubuntu /data/
