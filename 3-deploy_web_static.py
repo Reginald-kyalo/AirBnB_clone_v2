@@ -11,8 +11,9 @@ def do_pack():
     now = datetime.utcnow()
     timestamp = now.strftime("%Y%m%d%H%M%S")
     archive_name = f"web_static_{timestamp}.tgz"
-    if local("mkdir -p versions").failed:
-        return None
+    if os.path.isdir("versions") is False:
+        if local("mkdir -p versions").failed:
+            return None
     if not local(f"tar -cvzf versions/{archive_name} web_static").failed:
         return f"versions/{archive_name}"
     else:
