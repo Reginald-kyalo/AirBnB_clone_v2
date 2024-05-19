@@ -7,7 +7,7 @@ from datetime import datetime
 
 def do_pack():
     """Create a tar gzipped archive of the directory web_static."""
-    now = datetime.utcnow()
+    now = datetime.today()
     timestamp = now.strftime("%Y%m%d%H%M%S")
     archive_name = f"web_static_{timestamp}.tgz"
     if local("mkdir -p versions").failed:

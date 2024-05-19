@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-# Fabfile to distribute an archive to a web server.
+"""Fabfile to distribute an archive to a web server."""
 import os.path
 from fabric.api import env
 from fabric.api import put
 from fabric.api import run
 
-env.hosts = ["54.237.64.192", "54.236.12.78"]
+env.hosts = ["35.175.128.133", "100.25.149.124"]
 
 
 def do_deploy(archive_path):
