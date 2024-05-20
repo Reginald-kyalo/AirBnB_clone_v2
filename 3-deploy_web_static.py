@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# creates and distributes an archive to web servers
+"""creates and distributes an archive to web servers"""
 
 from fabric.api import local, run, put, env
 from datetime import datetime
@@ -8,7 +8,7 @@ import os.path
 
 def do_pack():
     """Create a tar gzipped archive of the directory web_static."""
-    now = datetime.utcnow()
+    now = datetime.today()
     timestamp = now.strftime("%Y%m%d%H%M%S")
     archive_name = f"web_static_{timestamp}.tgz"
     if os.path.isdir("versions") is False:
@@ -20,7 +20,7 @@ def do_pack():
         None
 
 
-env.hosts = ['54.237.64.192', '54.236.12.78']
+env.hosts = ["35.175.128.133", "100.25.149.124"]
 
 
 def do_deploy(archive_path):
